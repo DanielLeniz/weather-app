@@ -1,11 +1,12 @@
 import React, {useState} from 'react'
 import axios from 'axios'
+import {REACT_APP_API_KEY, REACT_APP_API_URL} from './api';
 
 function App() {
-const [data, setData] = useState({})
-const [location, setLocation] = useState('')
+  const [data, setData] = useState({})
+  const [location, setLocation] = useState('')
 
-const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=7cfbd1a3721cd8917da71986cb08bc8b`
+const url = `${REACT_APP_API_URL}/weather?q=${location}&units=imperial&appid=${REACT_APP_API_KEY}`;
 
 const searchLocation = (event) => {
   if (event.key === 'Enter'){
