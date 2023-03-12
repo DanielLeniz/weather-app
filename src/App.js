@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import axios from 'axios'
-import {REACT_APP_API_KEY, REACT_APP_API_URL} from './src/api';
+import {REACT_APP_API_KEY, REACT_APP_API_URL} from './api';
 
 function App() {
   const [data, setData] = useState({})
