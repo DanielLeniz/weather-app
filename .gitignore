@@ -27,4 +27,12 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 package-lock.json
+package.json
+yarn.lock
+public/
+src/setupTests.js
+src/reportWebVitals.js
+src/App.test.js
+src/App.css
+src/api.js
 
