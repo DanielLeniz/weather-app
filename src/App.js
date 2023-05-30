@@ -1,13 +1,12 @@
 import React, {useState} from 'react';
 import axios from 'axios';
-console.log(process.env.REACT_APP_API_KEY)
-console.log(process.env.REACT_APP_API_URL)
+import { REACT_APP_API_KEY, REACT_APP_API_URL } from './api';
 
 function App() {
   const [data, setData] = useState({})
   const [location, setLocation] = useState('')
 
-const url = `${process.env.REACT_APP_API_URL}/weather?q=${location}&units=imperial&appid=${process.env.REACT_APP_API_KEY}`;
+const url = `${REACT_APP_API_URL}/weather?q=${location}&units=imperial&appid=${REACT_APP_API_KEY}`;
 
 const searchLocation = (event) => {
   if (event.key === 'Enter'){
