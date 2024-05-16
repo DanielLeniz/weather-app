@@ -1,9 +1,15 @@
 import React, {useState} from 'react';
 import axios from 'axios';
+import Search from './search';
 console.log(process.env.REACT_APP_API_KEY)
 console.log(process.env.REACT_APP_API_URL)
 
 function App() {
+
+  const handleOnSearchChange = (searchData) => {
+    console.log(searchData);
+  }
+
   const [data, setData] = useState({})
   const [location, setLocation] = useState('')
 
@@ -22,6 +28,7 @@ const searchLocation = (event) => {
   return (
     <div className="app">
       <div className="search">
+        <Search />
         <input 
         value={location}
         onChange={event => setLocation(event.target.value)}
